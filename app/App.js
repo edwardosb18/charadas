@@ -7,6 +7,7 @@ const lista=document.querySelector(".lista")
 const arreglo=[]
 let guardado
 let html=""
+let list=""
 
 
 
@@ -18,39 +19,54 @@ lista.innerHTML="<p>la lista esta vacia</p>"
 }
 
 
-else{
-guardado=JSON.parse(localStorage.getItem("palabrasAdivinar"))
+ else{
+ guardado=JSON.parse(localStorage.getItem("palabrasAdivinar"))
 
 
-guardado.forEach((ele)=>{
-     html+=`<li>${ele}</li>`
+ guardado.forEach((ele)=>{
+      html+=`<li>${ele}</li>`
 
- })
+  })
 
- lista.innerHTML=html
+  lista.innerHTML=html
 
-}
+ }
+
+
 
 /*-----------------------------------*/
 document.addEventListener("submit",(e)=>{
-
-
-
-        e.preventDefault()
-
+    console.log("first")
+    list=" "
+     e.preventDefault()
+   
   arreglo.push(e.target.propuestas.value)
   e.target.propuestas.value=""
   e.target.propuestas.focus()
 
 
-  let palabrasAdivinar=arregloString(arreglo)
 
+  arreglo.forEach((ele)=>{
+ 
+    list+=`<li>${ele}</li>`
+
+})
+
+lista.innerHTML=list
+
+
+
+  let palabrasAdivinar=arregloString(arreglo)
 
   console.log(palabrasAdivinar)
   localStorage.setItem("palabrasAdivinar",palabrasAdivinar)
 
-
 })
+
+
+
+
+
 
 /*-----------------------------------*/
 
@@ -71,6 +87,10 @@ document.addEventListener("click",(e)=>{
 
    
 }
+
+
+
+
 
 /*-----------------------------------*/
 
