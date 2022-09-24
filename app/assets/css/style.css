@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Itim', cursive;
+}
+.titulo{
+    text-align: center;
+}
+img{width: 100%;}
+
+.agregar label{
+    display: block;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+button{
+    display: block;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+ul{
+    padding-left: 16px;
+    margin: 0;
+}

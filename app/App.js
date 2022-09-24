@@ -14,7 +14,7 @@ let html=""
 let list=""
 
 
-const musicAletorio=["audio","audio2","audio3","audio4","audio5","audio6"]
+const musicAletorio=["audio","audio6","audio7"]
 azar(musicAletorio)
 let music=azar(musicAletorio)
 console.log(music)
