@@ -11,12 +11,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
 </head>
 <body>
+    
     <h1 class="titulo">charadas</h1>
     <img src="app/assets/saltando.jpg" alt="">
 
 <form class="agregar">
 <label for="propuestas">Escribe la palabra a adivinar</label>
-<input type="text" name="propuestas" id="propuestas">
+<input type="text" name="propuestas" id="propuestas" autocomplete="off">
 <input type="submit" value="agregar">
 <input type="reset" value="nueva lista">
 </form>
@@ -30,7 +31,7 @@
 <form class="tiempo" >
 
 <label for="tiempo">tiempo</label>
-<input type="number" required  name="tiempo" id="tiempo">
+<input type="number" required  name="tiempo" id="tiempo" autocomplete="off">
 <input type="submit" value="comenzar">
 </form>
 

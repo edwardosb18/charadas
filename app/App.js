@@ -14,18 +14,14 @@ let html=""
 let list=""
 
 
-const musicAletorio=["audio","audio6","audio7"]
-azar(musicAletorio)
-let music=azar(musicAletorio)
-console.log(music)
+
 
 
 
 const audio=document.createElement("audio")
-audio.src=`app/assets/${music}.mp3`
-audio.loop=true
-console.log(audio)
+audio.src=`app/assets/musicafinish.mp3`
 
+console.log(audio)
 
 
 
@@ -50,7 +46,9 @@ else if(localStorage.getItem("palabra")==="comienze el juego"){
 
 }
 
-else{palabra.textContent=localStorage.getItem("palabra")}
+else{palabra.textContent=`la palabra a adivinar es:
+
+"${localStorage.getItem("palabra")}"`}
 
 
 
@@ -121,7 +119,7 @@ lista.innerHTML=list
 
 if(e.target.className==="tiempo"){
    e.preventDefault()
-   audio.play()
+   
 console.log("first")
 reloj=parseInt(e.target.tiempo.value)
 

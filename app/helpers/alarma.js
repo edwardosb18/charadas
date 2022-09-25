@@ -19,7 +19,7 @@ export const alarma=(finalidad,etiqueta,audio)=>{
     if(limite<0){
         clearInterval(g)
         pp.innerHTML=`termino tu tiempo `
-        audio.pause()
+        audio.play()
         console.log("fin")
     }
     
